@@ -1,0 +1,9 @@
+###Eliminar Usuario
+DELETE http://localhost:1234/perfiles/67d8404484004224063cdc9f
+
+###Eliminar Amigos
+DELETE http://localhost:1234/perfiles/67d8404484004224063cdc9f/0
+
+###
+GET http://localhost:1234/perfiles
+

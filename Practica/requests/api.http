@@ -1,0 +1,329 @@
+GET http://localhost:1234
+
+###
+GET http://localhost:1234/informacion
+
+###
+GET http://localhost:1234/ANKDNSKADL
+
+###
+POST http://localhost:1234/crear
+Content-Type: application/json
+
+[
+  {
+    "_id": "67d2fc994beaa3e3ca327e2c",
+    "index": 0,
+    "guid": "4657639d-91fc-4540-bd69-227889bb340d",
+    "isActive": true,
+    "balance": "$2,301.06",
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "eyeColor": "green",
+    "name": "Reva Beck",
+    "gender": "female",
+    "company": "PLASMOSIS",
+    "email": "revabeck@plasmosis.com",
+    "phone": "+1 (813) 542-3161",
+    "address": "515 Karweg Place, Shawmut, Virgin Islands, 1045",
+    "about": "Consequat et ipsum minim magna ut incididunt reprehenderit. Fugiat eiusmod quis ad ut in anim exercitation. Fugiat nisi in esse aute. Anim aliqua ex consequat dolor eu aliqua esse ullamco quis. Excepteur labore non sint aute laborum ea eu. Adipisicing ex Lorem sint ex ex enim occaecat. Occaecat dolore voluptate adipisicing aliqua tempor enim nostrud aute.\r\n",
+    "registered": "2024-01-13T09:38:33 +05:00",
+    "latitude": -16.335349,
+    "longitude": 48.716519,
+    "tags": [
+      "laborum",
+      "magna",
+      "officia",
+      "elit",
+      "proident",
+      "pariatur",
+      "do"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mejia Porter"
+      },
+      {
+        "id": 1,
+        "name": "Alberta Nash"
+      },
+      {
+        "id": 2,
+        "name": "Selena Hays"
+      }
+    ],
+    "greeting": "Hello, Reva Beck! You have 2 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "67d2fc99c7c4ab7a5aa7bff4",
+    "index": 1,
+    "guid": "f43ae259-4ea1-4b3f-b865-750df09f2e11",
+    "isActive": true,
+    "balance": "$2,293.76",
+    "picture": "http://placehold.it/32x32",
+    "age": 21,
+    "eyeColor": "blue",
+    "name": "Cleveland Clay",
+    "gender": "male",
+    "company": "HINWAY",
+    "email": "clevelandclay@hinway.com",
+    "phone": "+1 (873) 466-3057",
+    "address": "526 Lester Court, Singer, Georgia, 5126",
+    "about": "Dolore eu labore do duis dolore. Proident consequat ad nulla sunt irure cupidatat qui incididunt cupidatat commodo. Veniam Lorem quis sint proident proident sit fugiat.\r\n",
+    "registered": "2015-09-20T12:14:38 +05:00",
+    "latitude": 39.804677,
+    "longitude": 175.185835,
+    "tags": [
+      "ut",
+      "eiusmod",
+      "aute",
+      "est",
+      "officia",
+      "cillum",
+      "aliquip"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Pierce Gaines"
+      },
+      {
+        "id": 1,
+        "name": "Foster Fletcher"
+      },
+      {
+        "id": 2,
+        "name": "Mason Foreman"
+      }
+    ],
+    "greeting": "Hello, Cleveland Clay! You have 1 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "67d2fc99a1acf81968ded1e6",
+    "index": 2,
+    "guid": "5f74648d-5afe-436a-91f7-ff7c04ee4889",
+    "isActive": true,
+    "balance": "$3,673.46",
+    "picture": "http://placehold.it/32x32",
+    "age": 38,
+    "eyeColor": "blue",
+    "name": "Claire Wolf",
+    "gender": "female",
+    "company": "BOSTONIC",
+    "email": "clairewolf@bostonic.com",
+    "phone": "+1 (863) 525-2820",
+    "address": "411 Ridge Court, Carbonville, New Hampshire, 8792",
+    "about": "Exercitation ut ex non eiusmod in cupidatat excepteur et. Dolor tempor ullamco reprehenderit id consequat consectetur laborum culpa Lorem consequat. Excepteur duis nisi in id excepteur. Laborum cupidatat aliqua qui amet.\r\n",
+    "registered": "2014-12-19T07:07:01 +05:00",
+    "latitude": -61.553819,
+    "longitude": 112.689554,
+    "tags": [
+      "sunt",
+      "mollit",
+      "quis",
+      "est",
+      "in",
+      "sunt",
+      "cillum"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Acevedo Mckinney"
+      },
+      {
+        "id": 1,
+        "name": "Rosemary Farley"
+      },
+      {
+        "id": 2,
+        "name": "Monique Curtis"
+      }
+    ],
+    "greeting": "Hello, Claire Wolf! You have 8 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "67d2fc99d58b58fd5536b101",
+    "index": 3,
+    "guid": "b569b8e4-0f27-42fa-871c-3292defdc8ec",
+    "isActive": false,
+    "balance": "$3,080.70",
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "eyeColor": "green",
+    "name": "Holmes Alvarado",
+    "gender": "male",
+    "company": "FANFARE",
+    "email": "holmesalvarado@fanfare.com",
+    "phone": "+1 (916) 511-3144",
+    "address": "439 Jamaica Avenue, Morgandale, Kansas, 8295",
+    "about": "Do voluptate labore irure eiusmod sit sit consectetur id mollit consectetur ipsum laboris culpa excepteur. Consequat incididunt dolor excepteur est do deserunt eu ut eiusmod ex cillum. Eiusmod irure nostrud sint laboris pariatur aliquip.\r\n",
+    "registered": "2019-03-07T03:11:08 +05:00",
+    "latitude": 71.72666,
+    "longitude": 22.998075,
+    "tags": [
+      "id",
+      "adipisicing",
+      "laboris",
+      "incididunt",
+      "est",
+      "deserunt",
+      "laboris"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Beryl Gardner"
+      },
+      {
+        "id": 1,
+        "name": "Susie Anthony"
+      },
+      {
+        "id": 2,
+        "name": "Marylou Berry"
+      }
+    ],
+    "greeting": "Hello, Holmes Alvarado! You have 10 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "67d2fc99fb5bb67324d231ae",
+    "index": 4,
+    "guid": "7adc6a91-26b1-4634-8eb8-0e035bfb8d66",
+    "isActive": false,
+    "balance": "$2,398.89",
+    "picture": "http://placehold.it/32x32",
+    "age": 28,
+    "eyeColor": "blue",
+    "name": "Cross Carey",
+    "gender": "male",
+    "company": "SOLAREN",
+    "email": "crosscarey@solaren.com",
+    "phone": "+1 (996) 552-3656",
+    "address": "305 Navy Walk, Fedora, Texas, 102",
+    "about": "Ullamco laboris et amet eu in. Ullamco pariatur ad minim nisi sunt mollit deserunt ullamco. Nulla cillum proident nostrud consequat incididunt minim exercitation adipisicing magna aute voluptate. Culpa qui esse pariatur culpa enim non qui reprehenderit duis elit sit enim quis. Ut sit laborum commodo ex nulla sint commodo Lorem ea aliqua in. Fugiat aliquip nulla officia aliquip sint fugiat cupidatat reprehenderit.\r\n",
+    "registered": "2021-02-16T07:22:58 +05:00",
+    "latitude": -13.832902,
+    "longitude": -101.240475,
+    "tags": [
+      "Lorem",
+      "cupidatat",
+      "et",
+      "excepteur",
+      "nulla",
+      "ut",
+      "enim"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Reynolds Weber"
+      },
+      {
+        "id": 1,
+        "name": "Giles Rocha"
+      },
+      {
+        "id": 2,
+        "name": "Roth Vega"
+      }
+    ],
+    "greeting": "Hello, Cross Carey! You have 1 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "67d2fc99d6261aa5005ca1f7",
+    "index": 5,
+    "guid": "e98fc3ad-814a-4bad-9a9b-cf7c6affa6ba",
+    "isActive": true,
+    "balance": "$3,710.60",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "eyeColor": "green",
+    "name": "Cortez Hughes",
+    "gender": "male",
+    "company": "DATAGEN",
+    "email": "cortezhughes@datagen.com",
+    "phone": "+1 (879) 540-3638",
+    "address": "679 Sullivan Street, Glendale, Mississippi, 3638",
+    "about": "Exercitation exercitation enim commodo ex in qui fugiat eiusmod consequat laborum Lorem non pariatur. In ea id occaecat ut. Ad irure dolor exercitation id nisi do non amet do mollit exercitation. Lorem veniam officia aliqua dolore non cupidatat minim ullamco sit fugiat deserunt. Cillum ad aliquip ullamco proident velit veniam proident. Aute do occaecat ullamco voluptate ea cupidatat esse.\r\n",
+    "registered": "2021-03-08T05:46:42 +05:00",
+    "latitude": 20.143634,
+    "longitude": -133.121335,
+    "tags": [
+      "velit",
+      "aliquip",
+      "dolore",
+      "eu",
+      "minim",
+      "quis",
+      "eu"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Lydia Mclean"
+      },
+      {
+        "id": 1,
+        "name": "Soto Burnett"
+      },
+      {
+        "id": 2,
+        "name": "Kristie Bean"
+      }
+    ],
+    "greeting": "Hello, Cortez Hughes! You have 4 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "67d2fc999372c99ef3e40e55",
+    "index": 6,
+    "guid": "3d1ea2ac-7312-4fc1-bafb-39a5b3544e1c",
+    "isActive": true,
+    "balance": "$1,919.18",
+    "picture": "http://placehold.it/32x32",
+    "age": 28,
+    "eyeColor": "brown",
+    "name": "Singleton Sheppard",
+    "gender": "male",
+    "company": "MEDIOT",
+    "email": "singletonsheppard@mediot.com",
+    "phone": "+1 (912) 448-2894",
+    "address": "864 Dare Court, Roland, Washington, 7666",
+    "about": "Ex fugiat proident sint reprehenderit irure. Amet non consectetur commodo adipisicing Lorem. Occaecat ipsum ea ipsum voluptate. Nostrud consectetur Lorem aliqua tempor ex elit cupidatat aliquip exercitation pariatur irure sint adipisicing sunt. In officia laborum non ad id dolore magna qui qui voluptate aliquip occaecat sit.\r\n",
+    "registered": "2015-09-08T10:02:36 +05:00",
+    "latitude": -52.880571,
+    "longitude": -102.532091,
+    "tags": [
+      "ad",
+      "qui",
+      "amet",
+      "consequat",
+      "ad",
+      "elit",
+      "laboris"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mays Whitney"
+      },
+      {
+        "id": 1,
+        "name": "Glover Barker"
+      },
+      {
+        "id": 2,
+        "name": "Amber Powell"
+      }
+    ],
+    "greeting": "Hello, Singleton Sheppard! You have 2 unread messages.",
+    "favoriteFruit": "apple"
+  }
+]

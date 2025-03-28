@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SergiCl</title>
+    <style>
+        body {
+            width: auto;
+            height: 100%;
+            display: flex;
+        }
+
+        article {
+            padding: auto;
+            margin: 10px;
+            display: block;
+            justify-content: center;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: xx-large;
+        }
+
+        .listaAmigos {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .divEliminar {
+            display: inline-block;
+            margin-left: 30px
+        }
+
+        .articleAm {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .amigo {
+            display: inline-block;
+        }
+
+        .spanH {
+            display: inline-block;
+        }
+    </style>
+    <script type="module">
+        fetch("http://localhost:1234/perfiles")
+            .then(res => res.json())
+            .then(perfiles => {
+                const perfilesAR = perfiles.map(perfil => {
+                    console.log("Id de la persona: ", perfil.id)
+                    let amigos = perfil.amigos
+                    console.log("Array de amigos: ", amigos)
+                    let htmlAmigos = ``
+                    if (amigos.length === 0) {
+                        htmlAmigos = `<span class="spanH">Sin amigos</span>`
+                    }
+                    if (amigos.length > 0) {
+                        let articleAmigos = amigos.map(amigo => {
+                            return `<article class="articleAm" data-id="${amigo.id}">${amigo.name}</article>`
+                        }).join("")
+                        console.log("article amigos: ", articleAmigos)
+                        htmlAmigos = `
+                        
+                            <span class="spanH"> Amigos: </span>
+                            
+                            <div class="amigo">
+                                ${articleAmigos}
+                            </div>
+
+                             <div class="divEliminar" >
+                                <button data-id="${perfil.id}" class="eliminarAmigos">Eliminar Amigo</button>
+                            </div>
+                        `
+                    }
+                    return `
+                        <article class="perfil" data-id="${perfil.id}">
+                            <h2>Nombre de Usuario: ${perfil.nombre}</h2>
+                            <h4 class="listaAmigos">
+                             ${htmlAmigos}
+                            </h4>
+                           
+                            <p>${perfil.telefono}</p>
+                            <button class="eliminarUsuario">Eliminar Usuario</button>
+                        </article >
+                    `
+                }).join("")
+                document.querySelector("main").innerHTML = perfilesAR
+
+                document.addEventListener('click', e => {
+                    if (e.target.matches('.eliminarUsuario')) {
+                        const article = e.target.closest('article')
+                        const id = article.dataset.id;
+
+                        fetch(`http://localhost:1234/perfiles/${id}`, {
+                            method: 'DELETE'
+                        })
+                            .then(res => {
+                                if (res.ok) {
+                                    article.remove()
+                                    console.log(id, 'eliminado')
+                                }
+                            })
+                    }
+                })
+
+                let articlePerfil, id, article, idAmigo;
+                let listaId = [];
+
+                document.addEventListener('click', e => {
+
+                    if (e.target.matches('.articleAm')) {
+                        articlePerfil = e.target.closest('.perfil')
+                        id = articlePerfil.dataset.id
+                        article = e.target.closest('.articleAm')
+                        idAmigo = article.dataset.id;
+                        console.log("id amigo: ", idAmigo)
+
+                        if (article.style.background === "blue") {
+                            article.style.background = "white"
+                            listaId.splice(listaId.findIndex(e => e === idAmigo), 1)
+                        } else {
+                            article.style.background = "blue"
+                            listaId.push({ idP: id, idA: idAmigo })
+                        }
+                        console.log("lista id: ", listaId)
+                    }
+
+
+                })
+
+                document.addEventListener('click', e => {
+
+                    if (e.target.matches('.eliminarAmigos') && listaId.length === 0) {
+                        return
+                    }
+
+                    if (e.target.matches('.eliminarAmigos')) {
+
+                        const idBoton = e.target.closest('.eliminarAmigos').dataset.id
+                        console.log('id boton: ', idBoton)
+
+                        console.log("listaid en eliminar amigos", listaId)
+                        Promise.all(listaId.map(ele => {
+
+                            return fetch(`http://localhost:1234/perfiles/${id}/${ele.idA}`, { method: 'DELETE' })
+                                .then(res => res.ok ? { idP: ele.idP, idA: ele.idA } : null)
+
+                        }))
+                            .then(eliminados => {
+
+                                console.log("eliminados:", eliminados)
+                                document.querySelectorAll('.articleAm').forEach(article => {
+
+                                    if (idBoton == eliminados.idP) {
+                                        article.remove()
+                                    }
+
+                                })
+                            })
+                            .catch(error => console.error("Error aliminando amigos: ", error))
+
+                    }
+
+                })
+
+
+            })
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="amigo"></div>
+    </main>
+</body>
+
+</html>
