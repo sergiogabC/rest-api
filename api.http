@@ -1,0 +1,30 @@
+###Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+###Recuperar pelicula por id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+###Recuperar todas las películas por un género
+GET http://localhost:1234/movies?genre=Action 
+
+###Crear un pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "Asu Mare",
+    "year": 2013,
+    "director": "Ricardo Maldonado",
+    "duration": 100,
+    "poster": "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcR7-DeW42mj9_IqQ3lnJbYexZ2YLdE-StT6h0IAgbuqgC4IoE2Y4gtf-CBPAhGjINtAeCJyTLETZddvMF0K",
+    "genre": ["Comedy"],
+    "rate": 9.3
+}
+
+###Actualizar una pelicula
+PATCH http://localhost:1234/movie/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title":"HOLA"
+}
